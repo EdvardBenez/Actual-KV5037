@@ -3,9 +3,9 @@ import cv2
 from ultralytics import YOLO
 import sqlite3
 import datetime
-import db1000
+import db_main
 
-conn, cursor = db1000.db_setup() # create db
+conn, cursor = db_main.db_setup() # create db
 
 #cam set up
 yolo = YOLO("yolo26n.pt")
@@ -24,7 +24,7 @@ crossing_state = {} # dictionary to store state of each id, "entered_zone_left" 
 current_state = {}
 conf = 0.80
 
-# make the camera work lol
+# make the camera work
 while True:
     frame = picam2.capture_array()
 
@@ -95,7 +95,7 @@ while True:
                     conn.commit()
                     
                     crossing_state[track_id] = "counted"
-                    #print(f"[{timestamp}] Person {track_id} exited. Total out: {right_to_left_count}")
+                  
 
             #green box (bounding box)
             cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
@@ -112,5 +112,5 @@ while True:
         break
 
 picam2.stop()
-#cv2.destroyAllWindows()
+cv2.destroyAllWindows()
 conn.close()

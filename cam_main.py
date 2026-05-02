@@ -5,7 +5,7 @@ import sqlite3
 import datetime
 import db_main #database file
 
-conn, cursor = db1000.db_setup() # create db
+conn, cursor = db_main.db_setup() # create db
 
 #cam set up & yolo version
 yolo = YOLO("yolo26n.pt")

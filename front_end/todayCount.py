@@ -15,7 +15,7 @@ def calc_today_count():
         SELECT COUNT(*) 
         FROM Detections
         WHERE direction = 'in' AND DATE(timeStamp) = DATE('now')
-    """) #Will need to change DATE('2025-01-15') to DATE('now') after testing.
+    """)
 
     todayCountResult = todayCountQuery.fetchone()
     return todayCountResult[0] or 0 #Returning 1st item as SQLite returns a tuple, and setting default value of 0 if result is invalid.

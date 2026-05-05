@@ -14,7 +14,7 @@ from datetime import datetime, timedelta
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB_PATH = os.path.join(BASE_DIR, 'detections.db')
 
-#Colour platate changer
+#Colour palate changer
 COLOUR_HEADER_BG = "#444441"
 COLOUR_HEADER_TEXT = "#D3D1C7"
 COLOUR_CARD_BG = "#F1EFE8"

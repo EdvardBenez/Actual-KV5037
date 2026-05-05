@@ -19,7 +19,7 @@ def calc_peak_hour():
         GROUP BY hour
         ORDER BY count DESC
         LIMIT 1             
-        """) #Will need to change DATE('2025-01-15') to DATE('now') after testing.
+        """)
 
     todayCountResult = todayCountQuery.fetchone()
     #Checking if there's no data for today.

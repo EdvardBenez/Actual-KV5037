@@ -50,7 +50,7 @@ while True:
             #calculating value of body centre for position tracking
             x1, y1, x2, y2 = map(int, box.xyxy[0])
             track_id = int(box.id[0])
-            cx = (x1 + x2) // 2                   # centre of a persons' bounding box
+            cx = (x1 + x2) // 2 # centre of a persons' bounding box
 
             # LINE CROSSING LOGIC
             

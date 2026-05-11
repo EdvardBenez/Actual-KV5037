@@ -30,7 +30,7 @@ while True:
 
     #red line (counting line)
     cv2.line(frame, (line_x, 0), (line_x, frame.shape[0]), (0, 0, 255), 2)
-    cv2.line(frame, (line_y, 0), (line_y, frame.shape[0]), (0, 0, 255), 2) # failed experiment (works somewhat but conflicting mechanism & hardware limitation)
+    cv2.line(frame, (line_y, 0), (line_y, frame.shape[0]), (0, 0, 255), 2) 
 
     results = yolo.track(
         frame,
